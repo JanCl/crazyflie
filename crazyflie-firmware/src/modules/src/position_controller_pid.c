@@ -43,7 +43,7 @@ enum constraint{meets_any_n_in_m, meets_row_n_in_m, misses_any_n_in_m, misses_ro
 bool check = false;
 // Weakly-hard constraint related (for controller management)
 static bool init = false;
-static char sequence[890]; 
+static char sequence[800]; 
 static int sequence_position = 0;
 //
 
@@ -126,7 +126,7 @@ void generate_sequence(enum constraint con, int length, float miss_probability, 
 
 void init_sequence() {
     srand(time(NULL));
-    generate_sequence(meets_any_n_in_m, 890 , 0.7, 9, 10);
+    generate_sequence(meets_any_n_in_m, 800 , 0.7, 9, 10);
     //generate_sequence(meets_row_n_in_m, 150 , 0.7, 3, 7); 
     //generate_sequence(misses_any_n_in_m, 150 , 0.7, 2, 5);
     //generate_sequence(misses_row_n_in_m, 150 , 0.7, 4, 15);   
